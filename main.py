@@ -23,7 +23,7 @@ def print_out_web_interface():
         st.text("Command was set to: $ %s" % (command))
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8080)
 
 print_out_web_interface()

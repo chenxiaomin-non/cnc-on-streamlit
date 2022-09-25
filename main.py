@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 import streamlit as st
 
 app = FastAPI()
@@ -21,5 +22,8 @@ def print_out_web_interface():
         current_command = command
         st.text("Command was set to: $ %s" % (command))
 
+
+uvicorn.run("main:app", host="0.0.0.0", port=8080)
 print_out_web_interface()
+
     
